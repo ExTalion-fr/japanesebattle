@@ -1,0 +1,27 @@
+
+// Colors
+
+$color-error: #ff3333;
+$color-valid: #4db34d;
+$color-white: #ffffff;
+
+$color-text: $color-white;
+$color-primary: #FFA811;
+$color-primary-light: #ffb639;
+$color-primary-dark: #b8790c;
+$color-secondary: #58a046;
+
+$color-background: #08050f;
+$color-body-background: $color-background;
+$color-header-background: $color-secondary;
+$color-admin-background: #231d33;
+
+$color-villager: #124E8A;
+$color-werewolf: #8B181A;
+
+$font: 'Epilogue', sans-serif;
+$font-size: 16px;
+$program-item-translate-top: 100px;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');

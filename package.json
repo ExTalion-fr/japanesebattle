@@ -1,0 +1,24 @@
+{
+    "name": "japanesebattle",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "nodemon index.js"
+    },
+    "dependencies": {
+        "express": "^4.18.2",
+        "nodemon": "^2.0.15",
+        "socket.io": "^4.6.2"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ExTalion-fr/japanesebattle.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/ExTalion-fr/japanesebattle/issues"
+    },
+    "homepage": "https://github.com/ExTalion-fr/japanesebattle#readme"
+}

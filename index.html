@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>WereWolf</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="WereWolf">
+        <meta name="author" content="WereWolf">
+        <meta name="keywords" content="WereWolf">
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <script src="https://kit.fontawesome.com/f03666ecf4.js" crossorigin="anonymous"></script>
+        <script src="./assets/js/jquery-3.7.0.min.js"></script>
+        <script src="./node_modules/socket.io/client-dist/socket.io.js"></script>
+        <script src="./assets/js/script.js"></script>
+    </head>
+    <body>
+        <div id="index" class="row justify-center align-center">
+            <div id="page-index" class="page col">
+                <button id="index-button-create" class="btn">Créer</button>
+                <button id="index-button-join" class="btn">Rejoindre</button>
+            </div>
+            <div id="page-join" class="page col">
+                <input id="join-input" type="text" class="btn" placeholder="Code de la partie">
+                <button id="join-button" class="btn">Rejoindre</button>
+            </div>
+            <div id="page-room" class="page col">
+                <div id="player-list" class="list"></div>
+                <span id="room-link"></span>
+                <div id="lettering-choice">
+                    <div class="active" data-type="hiragana">Hiragana</div>
+                    <div data-type="katakana">Katakana</div>
+                </div>
+                <button id="room-button-start" class="btn">Lancer</button>
+            </div>
+            <div id="page-game" class="page">
+                <div id="item-list" class="list"></div>
+                <button id="game-button-finish" class="btn">Terminer</button>
+            </div>
+        </div>
+        <div id="popup">
+            <div class="popup-content">
+                <div class="popup-title">La voyante</div>
+                <div class="popup-description">Le joueur ExTalion est Loup Garou</div>
+                <button class="popup-button">Fermer</button>
+            </div>
+        </div>
+    </body>
+</html>
