@@ -1,4 +1,14 @@
 const http = require('http').createServer();
+const express = require('express');
+const path = require('path');
+
+const app = express();
+
+app.use('/', express.static(path.join(__dirname, 'public'))); 
+
+app.listen(3000, () => {
+    console.log('listening on *:3000');
+});
 
 const io = require('socket.io')(http, {
     cors: { origin: "*" }
