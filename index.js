@@ -1,17 +1,14 @@
-const http = require('http').createServer();
 const express = require('express');
-const path = require('path');
-
+const http = require('http');
+const { Server } = require("socket.io");
 const app = express();
+const server = http.createServer(app);
+const io = new Server(server);
 
-app.use('/', express.static(path.join(__dirname, 'public'))); 
+app.use(express.static('public')); 
 
-app.listen(3000, () => {
-    console.log('listening on *:3000');
-});
-
-const io = require('socket.io')(http, {
-    cors: { origin: "*" }
+app.get('/', (req, res) => {
+    res.send('/index.html');
 });
 
 const hiraganaList = [
@@ -236,4 +233,6 @@ io.on('connection', (socket) => {
 
 });
 
-http.listen(8080, () => console.log('listening on http://localhost:8080'));
+server.listen(3000, () => {
+    console.log('listening on *:3000');
+});
