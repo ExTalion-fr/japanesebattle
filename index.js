@@ -8,7 +8,7 @@ const io = new Server(server);
 app.use(express.static('public')); 
 
 app.get('/', (req, res) => {
-    res.send('/index.html');
+    res.sendFile('/index.html');
 });
 
 const hiraganaList = [
