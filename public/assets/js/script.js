@@ -142,11 +142,15 @@ function addLettering(letter) {
 
 function finish() {
     let letterList = $('#item-list');
-    // letterList.children().each(function() {
-    //     if (!$(this).hasClass("correct")) {
-    //         $(this).find("input").focus();
-    //         return false;
-    //     }
-    // });
-    socket.emit('finishGame', roomId, player);
+    let canFinish = true;
+    letterList.children().each(function() {
+        if (!$(this).hasClass("correct")) {
+            console.log(false);
+            $(this).find("input").focus();
+            canFinish = false;
+        }
+    });
+    if (canFinish !== false) {
+        socket.emit('finishGame', roomId, player);
+    }
 }
