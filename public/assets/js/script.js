@@ -9,7 +9,7 @@ let players = [];
 $(function(){
     window.onload = async (e) => {
 
-        socket = io('ws://localhost:8080');
+        socket = io('https://japanesebattle.vercel.app:8080');
 
         $("#index-button-create").click(function() {
             socket.emit('createRoom', (repsonse) => {
