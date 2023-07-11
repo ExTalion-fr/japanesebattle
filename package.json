@@ -20,17 +20,5 @@
     "bugs": {
         "url": "https://github.com/ExTalion-fr/japanesebattle/issues"
     },
-    "homepage": "https://github.com/ExTalion-fr/japanesebattle#readme",
-    "builds": [
-        {
-            "src": "index.js",
-            "use": "@vercel/node"
-        }
-    ],
-    "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "/index.js"
-        }
-    ]
+    "homepage": "https://github.com/ExTalion-fr/japanesebattle#readme"
 }
