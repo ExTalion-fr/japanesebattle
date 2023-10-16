@@ -5,6 +5,7 @@ let pageStatus = "index";
 let roomId = null;
 let player = null;
 let players = [];
+let finishStatus = false;
 
 $(function(){
     window.onload = async (e) => {
@@ -117,7 +118,7 @@ function initializeOnEvents() {
         } else {
             $('#popup .popup-title').html(`Vous avez perdu !`);
         }
-        $('#popup .popup-description').html(`${player.name} a gagné en ${timeDiff / 1000}s !`);
+        $('#popup .popup-description').html(`${player.name} a gagné en ${timeDiff} !`);
     });
 }
 
@@ -141,6 +142,12 @@ function addLettering(letter) {
 }
 
 function finish() {
+    if (finishStatus) {
+        $('#page-index').css("display", "flex");
+        $('#page-game').hide();
+        pageStatus = "index";
+        return;
+    }
     let letterList = $('#item-list');
     let canFinish = true;
     letterList.children().each(function() {
@@ -152,5 +159,6 @@ function finish() {
     });
     if (canFinish !== false) {
         socket.emit('finishGame', roomId, player);
+        finishStatus = true;
     }
 }

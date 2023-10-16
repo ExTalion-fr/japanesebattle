@@ -261,6 +261,10 @@ io.on('connection', (socket) => {
     socket.on('finishGame', (roomId, player) => {
         console.log("finishGame : " + roomId + " " + player.id);
         let timeDiff = Date.now() - currentRooms[roomId].startTime;
+        let totalSeconds = Math.floor(timeDiff / 1000);
+        let minutes = Math.floor(totalSeconds / 60);
+        let seconds = totalSeconds % 60;
+        timeDiff = minutes + "m " + seconds + "s";
         io.to(roomId).emit('finishGame', player, timeDiff);
     });
 
